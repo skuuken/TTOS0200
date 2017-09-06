@@ -32,9 +32,9 @@ using System.Threading.Tasks;
             theirNumber = System.Convert.ToInt32(System.Console.ReadLine());
             //comparing that given umber is valid
                 if (theirNumber < 1 || theirNumber > 21)
-            {
-                Console.WriteLine("The given number is out of limits, try again.");
-            }
+                {
+                    Console.WriteLine("The given number is out of limits, try again.");
+                }
             else
             {
                 //comparing
@@ -45,6 +45,7 @@ using System.Threading.Tasks;
                 else
                 {
                     System.Console.WriteLine("You lose.");
+
                 }
             }
         }
