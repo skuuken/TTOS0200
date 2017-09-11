@@ -205,7 +205,56 @@ namespace Labrat
         public static void Tehtava12()
         {
             //Tee ohjelma, joka kysyy käyttäjältä 5 kokonaislukua. Luvut tulee sijoittaa taulukkoon. Ohjelman tulee tulostaa annetut luvut käänteisessä järjestyksessä.
-
+            int[] luvut = new int[5];
+            for (int i=0; i<luvut.Length; i++)
+            {
+                Console.WriteLine("Anna luku: ");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+            Console.Write("Luvut ovat: ");
+            for (int j=4; j>=0; j--)
+            {
+                Console.Write(luvut[j] + " ");
+            }
         }
+        public static void Tehtava13()
+        {
+            //Mäkihypyssä käytetään viittä arvostelutuomaria. Kirjoita ohjelma, joka kysyy arvostelupisteet yhdelle hypylle ja tulostaa tyylipisteiden summan siten, että summasta on vähennetty pois pienin ja suurin tyylipiste
+            int[] pisteet = new int[5];
+            int summa;
+            for (int i=0; i<pisteet.Length; i++)
+            {
+                Console.WriteLine("Anna pojot:");
+                pisteet[i] = int.Parse(Console.ReadLine());
+            }
+            summa = pisteet.Sum();
+            summa = summa - pisteet.Max() - pisteet.Min();
+
+            Console.WriteLine("Kokonaispisteet ovat: " + summa);
+        }
+        public static void Tehtava14()
+        {
+            //KESKEN
+            //Kirjoita ohjelma, joka pyytää käyttäjältä opiskelijoiden arvosanat 0-5 ohjelmointi-opintojaksosta (voit itse päättää lopetusehdon). Tulosta arvosanajakauma käyttäen tähtimerkkejä seuraavasti
+            int[] arvosanat = new int[30];
+            int luku=0;
+            Console.WriteLine("Lopetus antamalla 9");
+            for (int i = 0; luku != 9; i++)
+            {
+                Console.WriteLine("Anna arvosana (0-5):");
+                luku = int.Parse(Console.ReadLine());
+                arvosanat[i] = luku;
+            }   
+            Console.WriteLine("Arvosanat:");
+            for (int j = 0; j < arvosanat.Length; j++)
+            {
+                luku = arvosanat[j];
+                if (luku == 0)
+                {
+                    Console.Write("*");
+                }
+            }
+        }
+
     }
 }
