@@ -329,5 +329,11 @@ namespace Labrat
                 }
             }
         }
+        public static void Tehtava18()
+        {
+            Console.WriteLine("Anna lause käyttäen pieniä kirjaimia. Masiina kertoo onko lause palindromi");
+            string lause = Console.ReadLine();
+            Console.WriteLine(lause.SequenceEqual(lause.Reverse()));
+        }
     }
 }
