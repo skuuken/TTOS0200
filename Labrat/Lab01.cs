@@ -234,19 +234,19 @@ namespace Labrat
         }
         public static void Tehtava14()
         {
-            //KESKEN
             //Kirjoita ohjelma, joka pyytää käyttäjältä opiskelijoiden arvosanat 0-5 ohjelmointi-opintojaksosta (voit itse päättää lopetusehdon). Tulosta arvosanajakauma käyttäen tähtimerkkejä seuraavasti
-            int[] arvosanat = new int[30];
+            List<int> arvosanat = new List<int>();
             int luku=0;
-            Console.WriteLine("Lopetus antamalla 9");
-            for (int i = 0; luku != 9; i++)
+            Console.WriteLine("Lopetus antamalla 6");
+            for (int i = 0; luku != 6; i++)
             {
                 Console.WriteLine("Anna arvosana (0-5):");
                 luku = int.Parse(Console.ReadLine());
-                arvosanat[i] = luku;
+                arvosanat.Add(luku);
             }   
             Console.WriteLine("Arvosanat:");
-            for (int j = 0; j < arvosanat.Length; j++)
+            Console.Write("0: ");
+            for (int j = 0; j < arvosanat.Count; j++)
             {
                 luku = arvosanat[j];
                 if (luku == 0)
@@ -254,7 +254,80 @@ namespace Labrat
                     Console.Write("*");
                 }
             }
+            Console.Write("\n1: ");
+            for (int j = 0; j < arvosanat.Count; j++)
+            {
+                luku = arvosanat[j];
+                if (luku == 1)
+                {
+                    Console.Write("*");
+                }
+            }
+            Console.Write("\n2: ");
+            for (int j = 0; j < arvosanat.Count; j++)
+            {
+                luku = arvosanat[j];
+                if (luku == 2)
+                {
+                    Console.Write("*");
+                }
+            }
+            Console.Write("\n3: ");
+            for (int j = 0; j < arvosanat.Count; j++)
+            {
+                luku = arvosanat[j];
+                if (luku == 3)
+                {
+                    Console.Write("*");
+                }
+            }
+            Console.Write("\n4: ");
+            for (int j = 0; j < arvosanat.Count; j++)
+            {
+                luku = arvosanat[j];
+                if (luku == 4)
+                {
+                    Console.Write("*");
+                }
+            }
+            Console.Write("\n5: ");
+            for (int j = 0; j < arvosanat.Count; j++)
+            {
+                luku = arvosanat[j];
+                if (luku == 5)
+                {
+                    Console.Write("*");
+                }
+            }
         }
+        public static void Tehtava16()
+        {
+            //Tee ohjelma, joka arpoo satunnaisluvun väliltä 0-100. Käytä C#:n Random -luokkaa. Tämän jälkeen ohjelman käyttäjää kehoitetaan arvaaman arvottu luku. Ohjelman tulee antaa vihje arvauksen jälkeen onko arvottu luku pienemäi vai suurempi. Tämän jälkeen vihjeitä toistetaan kunnes käyttäjä arvaa oikean luvun. Tulosta lopuksi arvausten määrä näytölle. PS Satunnaislukujen arpomisesta tietokoneella löytyy mielenkiintoista luettavaa esimerkiksi tästä artikkelista: Computers are lousy random number generators.
+            Random rnd = new Random();
+            int luku = rnd.Next(100);
+            int laskuri = 0;
 
+            while (true)
+            {
+                Console.WriteLine("Anna luku: ");
+                int arvaus = int.Parse(Console.ReadLine());
+                if (arvaus > luku)
+                {
+                    Console.WriteLine("Luku on pienempi");
+                    laskuri++;
+                }
+                if (arvaus < luku)
+                {
+                    Console.WriteLine("Luku on suurempi");
+                    laskuri++;
+                }
+                if (arvaus == luku)
+                {
+                    laskuri++;
+                    Console.WriteLine("ONNEA! Arvasit oikein " + laskuri + " kerralla");
+                    break;
+                }
+            }
+        }
     }
 }
