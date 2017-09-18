@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace Labrat
 {
-    class Program
+/*    class Program
     {
         static void Main(string[] args)
-        {
+       {
             Lab01.Tehtava18();
+        }
+
+    }*/
+
+
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            Lab02.TestaaKiuas();
         }
     }
 }

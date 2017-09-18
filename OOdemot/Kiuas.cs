@@ -9,7 +9,7 @@ namespace JAMK.IT
   {
     public bool OnkoPäällä { get; set; }
     public float Lämpötila { get; set; }
-    //kosteus voi olla välillä 0-100
+
     float kosteus;
     public float Kosteus {
       get {return kosteus;}
