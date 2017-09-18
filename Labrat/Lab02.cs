@@ -11,15 +11,15 @@ namespace Labrat
 
         public class Kiuas
         {
-            public bool Virta { get; set; }
-            public int Lampotila { get; set; }
-            public int Kosteus { get; set; }
+            public bool virta { get; set; }
+            public int lampotila { get; set; }
+            public int kosteus { get; set; }
 
             public Kiuas()
             {
-                this.Virta = Virta;
-                this.Lampotila = Lampotila;
-                this.Kosteus = Kosteus;
+                this.virta = virta;
+                this.lampotila = lampotila;
+                this.kosteus = kosteus;
             }
         }
             public static void TestaaKiuas()
@@ -27,17 +27,24 @@ namespace Labrat
             Kiuas Harvia = new Kiuas();
 
             Console.WriteLine("Onko kiuas päällä? (true/false): ");
-            Harvia.Virta = bool.Parse(Console.ReadLine());
-            Console.WriteLine("Anna lämpötila: ");
-            Harvia.Lampotila = int.Parse(Console.ReadLine());
-            Console.WriteLine("Anna kosteus: ");
-            Harvia.Kosteus = int.Parse(Console.ReadLine());
-            Console.WriteLine("Kiukaan lämpötila on " + Harvia.Lampotila);
-            Console.WriteLine("Kiukaan kosteus on " + Harvia.Kosteus);
+            Harvia.virta = bool.Parse(Console.ReadLine());
+            if (Harvia.virta == true)
+            {
+                Console.WriteLine("Anna lämpötila: ");
+                Harvia.lampotila = int.Parse(Console.ReadLine());
+                Console.WriteLine("Anna kosteus: ");
+                Harvia.kosteus = int.Parse(Console.ReadLine());
+                Console.WriteLine("Kiukaan lämpötila on " + Harvia.lampotila);
+                Console.WriteLine("Kiukaan kosteus on " + Harvia.kosteus);
+            }
+            else
+            {
+                Console.WriteLine("Pistä se piäle");
+            }
             }
         public class Pesukone
         {
-
+            
         }
     }
 }
