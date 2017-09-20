@@ -129,7 +129,7 @@ namespace Labrat
             int vuosi;
             Console.WriteLine("Anna vuosi :");
             vuosi = int.Parse(Console.ReadLine());
-            if (vuosi % 4 == 0 || vuosi % 400 == 0)
+            if (vuosi % 4 == 0 && vuosi % 100 != 0 || vuosi % 400 == 0)
             {
                 Console.WriteLine("Vuosi on karkausvuosi");
             }
