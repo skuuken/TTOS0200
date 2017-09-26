@@ -62,9 +62,9 @@ namespace Labrat
         }
         public static void TestiPeti()
         {
-            Lukupvm Testi = new Lukupvm();
-            Lukupvm.OnkoLuku(Testi.Luku);
-            Lukupvm.OnkoPvm(Testi.Pvm);
+            Lukupvm testi = new Lukupvm();
+            Lukupvm.OnkoLuku(testi.Luku);
+            Lukupvm.OnkoPvm(testi.Pvm);
         }
         public class Hissi
         {
@@ -73,7 +73,6 @@ namespace Labrat
             {
                 this.CurrentFloor = CurrentFloor;
                 this.WantedFloor = WantedFloor;
-                CurrentFloor = 1;
             }
             private int wantedfloor;
             public int WantedFloor
@@ -110,11 +109,11 @@ namespace Labrat
             }
             public static void TestiHissi()
             {
-                Hissi Dynamo = new Hissi();
+                Hissi dynamo = new Hissi();
                 while (true)
                 {
-                    Dynamo.GoToFloor();
-                    Dynamo.PrintFloor();
+                    dynamo.GoToFloor();
+                    dynamo.PrintFloor();
                 }
             }
         }
@@ -125,7 +124,6 @@ namespace Labrat
             {
                 this.CurrentVolyme = CurrentVolyme;
                 this.WantedVolyme = WantedVolyme;
-                CurrentVolyme = 1;
             }
             private int wantedvolyme;
             public int WantedVolyme
@@ -165,11 +163,11 @@ namespace Labrat
             }
             public static void TestiVahvari()
             {
-                Vahvistin Marsu = new Vahvistin();
+                Vahvistin marsu = new Vahvistin();
                 while (true)
                 {
-                    Marsu.ChangeVolyme();
-                    Marsu.PrintVolyme();
+                    marsu.ChangeVolyme();
+                    marsu.PrintVolyme();
                 }
             }
         }
