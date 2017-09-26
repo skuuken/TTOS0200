@@ -73,6 +73,7 @@ namespace Labrat
             {
                 this.CurrentFloor = CurrentFloor;
                 this.WantedFloor = WantedFloor;
+                CurrentFloor = 1;
             }
             private int wantedfloor;
             public int WantedFloor
@@ -90,19 +91,86 @@ namespace Labrat
                     else if (value < 0) {
                         Console.WriteLine("LIIAN PIENI");
                     }
+                    else
+                    {
+                        wantedfloor = value;
+                    }
                 }
+            }
+            public int GoToFloor()
+            {
+                Console.WriteLine("Aseta kerros mihkä mennää (0-5): ");
+                WantedFloor = int.Parse(Console.ReadLine());
+                return WantedFloor;
+            }
+            public void PrintFloor()
+            {
+                CurrentFloor = WantedFloor;
+                Console.WriteLine("Olet kerroksessa " + CurrentFloor);
             }
             public static void TestiHissi()
             {
                 Hissi Dynamo = new Hissi();
-                int currentfloor = 1;
-                int wantedfloor;
-                Console.WriteLine("Olet kerroksessa " + currentfloor);
-                Console.WriteLine("Minne matka? ");
-                wantedfloor = int.Parse(Console.ReadLine());
-                Dynamo.CurrentFloor = wantedfloor;
-                Console.WriteLine("Olet kerroksessa " + Dynamo.CurrentFloor);
-
+                while (true)
+                {
+                    Dynamo.GoToFloor();
+                    Dynamo.PrintFloor();
+                }
+            }
+        }
+        public class Vahvistin
+        {
+            public int CurrentVolyme { get; set; }
+            public Vahvistin()
+            {
+                this.CurrentVolyme = CurrentVolyme;
+                this.WantedVolyme = WantedVolyme;
+                CurrentVolyme = 1;
+            }
+            private int wantedvolyme;
+            public int WantedVolyme
+            {
+                get
+                {
+                    return wantedvolyme;
+                }
+                set
+                {
+                    if (value > 100)
+                    {
+                        Console.WriteLine("LIIAN ISO. ASETETAAN MAKSIMIIN");
+                        wantedvolyme = 100;
+                    }
+                    else if (value < 0)
+                    {
+                        Console.WriteLine("LIIAN PIENI. ASETETAAN MINIMIIN");
+                        wantedvolyme = 0;
+                    }
+                    else
+                    {
+                        wantedvolyme = value;
+                    }
+                }
+            }
+            public int ChangeVolyme()
+            {
+                Console.WriteLine("Aseta uusi volyymi (0-100): ");
+                WantedVolyme = int.Parse(Console.ReadLine());
+                return WantedVolyme;
+            }
+            public void PrintVolyme()
+            {
+                CurrentVolyme = WantedVolyme;
+                Console.WriteLine("Vahvarin vola on " + CurrentVolyme);
+            }
+            public static void TestiVahvari()
+            {
+                Vahvistin Marsu = new Vahvistin();
+                while (true)
+                {
+                    Marsu.ChangeVolyme();
+                    Marsu.PrintVolyme();
+                }
             }
         }
     }
