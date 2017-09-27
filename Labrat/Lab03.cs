@@ -87,7 +87,7 @@ namespace Labrat
                     {
                         Console.WriteLine("LIIAN ISO");
                     }
-                    else if (value < 0) {
+                    else if (value < 1) {
                         Console.WriteLine("LIIAN PIENI");
                     }
                     else
@@ -98,7 +98,7 @@ namespace Labrat
             }
             public int GoToFloor()
             {
-                Console.WriteLine("Aseta kerros mihkä mennää (0-5): ");
+                Console.WriteLine("Aseta kerros mihkä mennää (1-5): ");
                 WantedFloor = int.Parse(Console.ReadLine());
                 return WantedFloor;
             }

@@ -20,7 +20,7 @@ namespace Labrat
     {
         static void Main(String[] args)
         {
-            Lab03.Vahvistin.TestiVahvari();
+            Lab03.Hissi.TestiHissi();
         }
     }
 }
