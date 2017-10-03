@@ -196,13 +196,13 @@ namespace Labrat
         public static void TestiRadio()
         {
             Radio grundig = new Radio();
-            int valinta = 100;
+            int valinta;
 
             grundig.TurnOnOff();
 
             while (grundig.Power == true)
             {
-                Console.WriteLine("RADIO \n 0. Virtakytkin \n 1. Vaihda taajuutta \n 2. Vaihda äänenvoimakkuutta");
+                Console.WriteLine("RADIO \n 0. Virtakytkin \n 1. Vaihda taajuutta \n 2. Vaihda äänenvoimakkuutta \n TAAJUUS: " + grundig.Frequency + "\n VOLYYMI: " + grundig.Volyme);
                 valinta = int.Parse(Console.ReadLine());
                 if (valinta == 1)
                 {
@@ -219,6 +219,93 @@ namespace Labrat
                     grundig.TurnOnOff();
                 }
             }
+        }
+        public class Item
+        {
+            public string Name { get; set; }
+            public int Year { get; set; }
+            public int Price { get; set; }
+
+            public Item()
+            {
+            }
+
+            public Item(string name, int year, int price)
+            {
+                Name = name;
+                Year = year;
+                Price = price;
+            }
+
+            public override string ToString()
+            {
+                return "Nimi: " + Name + " Vuosi: " + Year + " Hinta: " + Price + " euroa";
+            }
+
+        }
+
+        class Tech : Item
+        {
+            public string Model { get; set; }
+            public double Screen { get; set; }
+
+            public Tech()
+            {
+            }
+
+            public Tech(string name, int year, int price, string model, double screen)
+                : base(name, year, price)
+            {
+                Model = model;
+                Screen = screen;
+            }
+            public override string ToString()
+            {
+                return base.ToString() + " Malli: " + Model + " Näyttö: " + Screen + " tuumaa";
+            }
+        }
+
+        class Movie : Item
+        {
+            public int Length { get; set; }
+
+            public Movie()
+            {
+            }
+
+            public Movie(string name, int year, int price, int length)
+                : base(name, year, price)
+            {
+                Length = length;
+            }
+            public override string ToString()
+            {
+                return base.ToString() + " Pituus: " + Length + " minuuttia";
+            }
+        }
+
+        public static void TestaaItemit()
+        {
+            Tech laptop = new Tech("Dell", 2017,2300,"XPS 13",13.3);
+            Console.WriteLine("Kannettavan info:");
+            Console.WriteLine(laptop.ToString());
+            Console.WriteLine("");
+
+            Tech phone = new Tech("Sony", 2015, 500, "Xperia Z5",5.5);
+            Console.WriteLine("Puhelimen info:");
+            Console.WriteLine(phone.ToString());
+            Console.WriteLine("");
+
+            Movie movie1 = new Movie("Forrest Gump", 1994, 2, 144);
+            Console.WriteLine("Elokuva 1:n info:");
+            Console.WriteLine(movie1.ToString());
+            Console.WriteLine("");
+
+            Movie movie2 = new Movie("The Matrix", 1999, 3, 136);
+            Console.WriteLine("Elokuva 2:n info:");
+            Console.WriteLine(movie2.ToString());
+            Console.WriteLine("");
+
         }
     }
 }
