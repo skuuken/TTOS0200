@@ -20,7 +20,7 @@ namespace Labrat
     {
         static void Main(String[] args)
         {
-            Lab05.TestaaStudent();
+            Lab05.TestaaElukat();
         }
     }
 }
