@@ -114,7 +114,147 @@ namespace Labrat
                     Console.WriteLine(o.ToString());
                 }
             }
+        }
+        public class CD
+        {
+            public string Name { get; set; }
+            public string Artist { get; set; }
+            public List<Song> songs = new List<Song>();
+            
+            public CD()
+            {
 
+            }
+
+            public CD(string name, string artist)
+            {
+                Name = name;
+                Artist = artist;
+            }
+            public override string ToString()
+            {
+                string retval = string.Format("CD Data:\n Name: {0}\n Artist: {1}\n Songs: \n", Name, Artist);
+                foreach (Song item in songs)
+                {
+                    retval += item.ToString() + "\n";
+                }
+                return retval;
+            }
+        }
+        public class Song
+        {
+            public string Name { get; set; }
+            public string Duration { get; set; }
+
+            public Song()
+            {
+
+            }
+            public Song(string name, string duration)
+            {
+                Name = name;
+                Duration = duration;
+            }
+            public override string ToString()
+            {
+                return string.Format("{0}, {1}", Name, Duration);
+            }
+        }
+        public static void TestaaCD()
+        {
+            List<CD> levyt = new List<CD>();
+            CD levy1 = new CD("Endless Forms Most Beautiful", "Nightwish");
+            levy1.songs.Add(new Song("Shudder Before the beautiful", "6:29"));
+            levy1.songs.Add(new Song("Weak Fantasy", "5:23"));
+            levy1.songs.Add(new Song("Elan", "4:45"));
+            levy1.songs.Add(new Song("Yours Is an Empty Hope", "5:34"));
+            levy1.songs.Add(new Song("Our Decades in the Sun", "6:37"));
+            levy1.songs.Add(new Song("My Walden", "4:38"));
+            levy1.songs.Add(new Song("Endless Forms Most Beautiful", "5:07"));
+            levy1.songs.Add(new Song("Edema Ruh", "5:15"));
+            levy1.songs.Add(new Song("Alpenglow", "4:45"));
+            levy1.songs.Add(new Song("The Eyes of Sharbat Gula", "6:03"));
+            levy1.songs.Add(new Song("The Greatest Show on Earth", "24:00"));
+            Console.WriteLine(levy1.ToString());
+        }
+        public class Pakka
+        {
+            public List<Kortti> Kortit;
+            private static Random rng = new Random();
+
+            public Pakka()
+            {
+                Kortit = new List<Kortti>();
+            }
+
+            public void Sekoita()
+            {
+                int n = Kortit.Count;
+                while (n > 1)
+                {
+                    n--;
+                    int k = rng.Next(n + 1);
+                    Kortti value = Kortit[k];
+                    Kortit[k] = Kortit[n];
+                    Kortit[n] = value;
+                }
+                Console.WriteLine("Kortit on sekoitettu");
+            }
+            public override string ToString()
+            {
+                int luku = 1;
+                string retval = "";
+                foreach (Kortti item in Kortit)
+                {
+                    retval += luku + item.ToString();
+                    luku++;
+                }
+                return retval;
+            }
+        }
+        public class Kortti
+        {
+            public string Maa { get; set; }
+            public int Luku { get; set; }
+
+            public Kortti()
+            {
+
+            }
+            public Kortti(string maa, int luku)
+            {
+                Maa = maa;
+                Luku = luku;
+            }
+            public override string ToString()
+            {
+                return string.Format(" kortti on {0}#{1}\n", Maa, Luku);
+            }
+
+        }
+        public static void TestaaPakka()
+        {
+            Pakka pagga = new Pakka();
+
+            for (int i = 1; i <= 13; i++)
+            {
+                pagga.Kortit.Add(new Kortti("Hertta", i));
+            }
+            for (int i = 1; i <= 13; i++)
+            {
+                pagga.Kortit.Add(new Kortti("Ruutu", i));
+            }
+            for (int i = 1; i <= 13; i++)
+            {
+                pagga.Kortit.Add(new Kortti("Risti", i));
+            }
+            for (int i = 1; i <= 13; i++)
+            {
+                pagga.Kortit.Add(new Kortti("Pata", i));
+            }
+            Console.WriteLine(pagga.ToString());
+            pagga.Sekoita();
+            Console.WriteLine(pagga.ToString());
         }
     }
 }
