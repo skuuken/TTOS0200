@@ -162,7 +162,6 @@ namespace Labrat
         }
         public static void TestaaCD()
         {
-            List<CD> levyt = new List<CD>();
             CD levy1 = new CD("Endless Forms Most Beautiful", "Nightwish");
             levy1.songs.Add(new Song("Shudder Before the beautiful", "6:29"));
             levy1.songs.Add(new Song("Weak Fantasy", "5:23"));
