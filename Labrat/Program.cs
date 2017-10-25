@@ -20,7 +20,7 @@ namespace Labrat
     {
         static void Main(String[] args)
         {
-            Lab06.TestaaPakka();
+            Lab07.Tehtava1();
         }
     }
 }
