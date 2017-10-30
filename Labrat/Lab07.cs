@@ -42,5 +42,31 @@ namespace Labrat
                 Console.WriteLine(ex.Message);
             }
         }
+        public static void Tehtava2()
+        {
+            try
+            {
+                string filupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string filu = filupath + @"\nimet.txt";
+                if (File.Exists(filu))
+                {
+                    List<string> teksti = File.ReadAllLines(filu).ToList();
+                    var q = teksti.GroupBy(x => x)
+                        .Select(g => new { Value = g.Key, Count = g.Count() });
+
+                    Console.WriteLine("Löytyi " + teksti.Count + " riviä, ja " + " nimeä.");
+
+
+                    foreach (var x in q)
+                    {
+                        Console.WriteLine("Nimi " + x.Value + " esiintyy " + x.Count + " kertaa");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
