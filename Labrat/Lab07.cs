@@ -50,18 +50,34 @@ namespace Labrat
                 string filu = filupath + @"\nimet.txt";
                 if (File.Exists(filu))
                 {
+                    int nimet = 0;
                     List<string> teksti = File.ReadAllLines(filu).ToList();
                     var q = teksti.GroupBy(x => x)
                         .Select(g => new { Value = g.Key, Count = g.Count() });
 
-                    Console.WriteLine("Löytyi " + teksti.Count + " riviä, ja " + " nimeä.");
-
-
+                    foreach (var x in q)
+                    {
+                        nimet++;
+                    }
+                    Console.WriteLine("Löytyi " + teksti.Count + " riviä, ja " + nimet + " nimeä.");
                     foreach (var x in q)
                     {
                         Console.WriteLine("Nimi " + x.Value + " esiintyy " + x.Count + " kertaa");
                     }
+
+                    teksti.Sort();
+
+                    Console.WriteLine("Löytyi " + teksti.Count + " riviä, ja " + nimet + " nimeä sortattuna");
+                    foreach (var x in q)
+                    {
+                        Console.WriteLine("Nimi " + x.Value + " esiintyy " + x.Count + " kertaa");
+                    }
+
                 }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Tiedostoa ei löydy");
             }
             catch (Exception ex)
             {
