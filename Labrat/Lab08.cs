@@ -47,7 +47,7 @@ namespace Labrat
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
         }
         public class Product
@@ -96,7 +96,7 @@ namespace Labrat
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
         }
         public class Fish
@@ -166,7 +166,7 @@ namespace Labrat
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -235,17 +235,24 @@ namespace Labrat
         }
         public static void TestaaKuviot()
         {
-            List<Shape> Kuviot = new List<Shape>();
-            Kuviot.Add(new Circle("Circle",1));
-            Kuviot.Add(new Circle("Circle", 2));
-            Kuviot.Add(new Circle("Circle", 3));
-            Kuviot.Add(new Rectangle("Rectangle", 10,20));
-            Kuviot.Add(new Rectangle("Rectangle", 20,30));
-            Kuviot.Add(new Rectangle("Rectangle", 40,50));
-
-            foreach (Shape kuvio in Kuviot)
+            try
             {
-                Console.WriteLine(kuvio.ToString());
+                List<Shape> Kuviot = new List<Shape>();
+                Kuviot.Add(new Circle("Circle", 1));
+                Kuviot.Add(new Circle("Circle", 2));
+                Kuviot.Add(new Circle("Circle", 3));
+                Kuviot.Add(new Rectangle("Rectangle", 10, 20));
+                Kuviot.Add(new Rectangle("Rectangle", 20, 30));
+                Kuviot.Add(new Rectangle("Rectangle", 40, 50));
+
+                foreach (Shape kuvio in Kuviot)
+                {
+                    Console.WriteLine(kuvio.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
