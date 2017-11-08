@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labrat", "Labrat\Labrat.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VK44", "VK44\VK44.csproj", "{39C6A7B8-DC81-4615-8EEE-85726D4910F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDemo", "WPFDemo\WPFDemo.csproj", "{9B2C2057-4CA0-4CD7-895E-A69C0158C7CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFLab09.1", "WPFLab09.1\WPFLab09.1.csproj", "{62213F5F-490E-44C2-A941-881F12C66127}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{39C6A7B8-DC81-4615-8EEE-85726D4910F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39C6A7B8-DC81-4615-8EEE-85726D4910F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39C6A7B8-DC81-4615-8EEE-85726D4910F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2C2057-4CA0-4CD7-895E-A69C0158C7CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2C2057-4CA0-4CD7-895E-A69C0158C7CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2C2057-4CA0-4CD7-895E-A69C0158C7CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2C2057-4CA0-4CD7-895E-A69C0158C7CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62213F5F-490E-44C2-A941-881F12C66127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62213F5F-490E-44C2-A941-881F12C66127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62213F5F-490E-44C2-A941-881F12C66127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62213F5F-490E-44C2-A941-881F12C66127}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
