@@ -25,16 +25,20 @@ namespace WPFLab09._1
             InitializeComponent();
         }
 
+        int trucks = 0;
         private void btnTruck_Click(object sender, RoutedEventArgs e)
         {
-            int klikki = int.Parse(txbTruck.Text);
-            klikki++;
-            txbTruck.Text = klikki;
+            trucks++;
+            string truck = trucks.ToString();
+            txbTruck.Text = truck;
         }
 
+        int cars = 0;
         private void btnCar_Click(object sender, RoutedEventArgs e)
         {
-
+            cars++;
+            string car = cars.ToString();
+            txbCar.Text = car;
         }
     }
 }
