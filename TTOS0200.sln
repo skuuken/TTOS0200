@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{43D3A9D9-D831-46CD-BE33-1DE6770DB406}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFLab09.1", "WPFLab09.1\WPFLab09.1.csproj", "{62213F5F-490E-44C2-A941-881F12C66127}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFLab09.2", "WPFLab09.2\WPFLab09.2.csproj", "{ACE3D79B-6399-441C-91A2-31EE5436E79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autotall1", "Autotall1\Autotall1.csproj", "{44B56F05-8DDA-4975-8DBD-571EB6E9C447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{ACE3D79B-6399-441C-91A2-31EE5436E79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACE3D79B-6399-441C-91A2-31EE5436E79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACE3D79B-6399-441C-91A2-31EE5436E79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B56F05-8DDA-4975-8DBD-571EB6E9C447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B56F05-8DDA-4975-8DBD-571EB6E9C447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B56F05-8DDA-4975-8DBD-571EB6E9C447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B56F05-8DDA-4975-8DBD-571EB6E9C447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
