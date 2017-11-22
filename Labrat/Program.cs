@@ -20,7 +20,7 @@ namespace Labrat
     {
         static void Main(String[] args)
         {
-            Lab08.TestaaKuviot();
+            Oliokertaus.PaaOhjelma();
         }
     }
 }

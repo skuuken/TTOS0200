@@ -51,6 +51,7 @@
     <Compile Include="Lab06.cs" />
     <Compile Include="Lab07.cs" />
     <Compile Include="Lab08.cs" />
+    <Compile Include="Oliokertaus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
